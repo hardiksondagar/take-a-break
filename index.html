@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Take a Break — Sleep better, stream smarter</title>
+  <meta name="description" content="Take a Break is a gentle Chrome extension that reminds you to stop autoplay late at night. Snooze, wind down, and sleep better.">
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, #3b2b77 0%, #1b1535 50%, #0f0c1f 100%);
+      color: #f8f9fa;
+      line-height: 1.6;
+    }
+    a {
+      color: #c4b5fd;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 48px;
+    }
+    .logo {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .badge {
+      background: rgba(139, 92, 246, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      color: #c4b5fd;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 36px;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+    .hero h1 {
+      font-size: 42px;
+      line-height: 1.1;
+      margin: 0 0 16px;
+    }
+    .hero p {
+      color: #c7c9d6;
+      margin: 0 0 20px;
+      font-size: 18px;
+    }
+    .cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+      color: white;
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      color: #f8f9fa;
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .section-title {
+      font-size: 22px;
+      margin: 8px 0 18px;
+    }
+    .list {
+      margin: 0;
+      padding-left: 18px;
+      color: #c7c9d6;
+    }
+    .highlight {
+      color: #fbbf24;
+      font-weight: 600;
+    }
+    .footer {
+      margin-top: 48px;
+      color: #9ca3af;
+      font-size: 13px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="logo">🌙 Take a Break <span class="badge">Chrome Extension</span></div>
+      <a href="privacy.html">Privacy</a>
+    </div>
+
+    <div class="hero">
+      <div>
+        <h1>Sleep better, stream smarter.</h1>
+        <p>
+          Take a Break is a gentle bedtime reminder that stops autoplay from keeping you up.
+          Set a timer, get a friendly countdown, snooze if you want, or call it a night.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#">Get on Chrome Web Store</a>
+          <a class="btn btn-secondary" href="https://github.com/hardiksondagar/take-a-break">View on GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <strong>Quick summary</strong>
+        <ul class="list">
+          <li>Auto wind‑down after your watch timer ends</li>
+          <li>Snooze button for “just 30 more minutes”</li>
+          <li>Midnight reminder with no auto‑close</li>
+          <li>Watch‑time badge + popup timer</li>
+          <li>Configurable sites and timers</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section-title">How it works</h2>
+    <div class="grid">
+      <div class="card">
+        <strong>1. Start watching</strong>
+        <p class="list">Open Netflix, YouTube, Hotstar, or any supported site.</p>
+      </div>
+      <div class="card">
+        <strong>2. Timer runs</strong>
+        <p class="list">Your watch timer counts quietly in the background.</p>
+      </div>
+      <div class="card">
+        <strong>3. Gentle reminder</strong>
+        <p class="list">A calm countdown asks if you want to continue or snooze.</p>
+      </div>
+      <div class="card">
+        <strong>4. Good night</strong>
+        <p class="list">If you don’t respond, the tab closes automatically.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Why people like it</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="highlight">No guilt</div>
+        <p class="list">Friendly copy instead of harsh blockers.</p>
+      </div>
+      <div class="card">
+        <div class="highlight">Full control</div>
+        <p class="list">Timers, snooze, and sites are fully customizable.</p>
+      </div>
+      <div class="card">
+        <div class="highlight">Peace of mind</div>
+        <p class="list">No data collection. Settings stay on your device.</p>
+      </div>
+      <div class="card">
+        <div class="highlight">Works everywhere</div>
+        <p class="list">Supports global + India streaming platforms.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Supported sites</h2>
+    <div class="card">
+      <p class="list">
+        Netflix, Prime Video, Disney+, Hulu, Max, YouTube, Apple TV+, Peacock,
+        Paramount+, Crunchyroll, Hotstar, JioCinema, SonyLIV, ZEE5, Voot,
+        MX Player, ALTBalaji, Eros Now, Sun NXT, Hoichoi, Aha, Chaupal, ShemarooMe.
+        Add custom domains anytime.
+      </p>
+    </div>
+
+    <div class="footer">
+      Sleep well, stream better ✨
+    </div>
+  </div>
+</body>
+</html>
