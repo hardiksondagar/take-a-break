@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Take a Break - Settings</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="popup-logo">🌙</div>
+      <h1 class="popup-title">Take a Break</h1>
+      <p class="popup-subtitle">Your friendly bedtime reminder</p>
+    </header>
+
+    <main class="popup-main">
+      <!-- Quick Status -->
+      <section class="popup-section status-section">
+        <div class="status-indicator">
+          <span class="status-icon" id="statusIcon">✓</span>
+          <span class="status-text" id="statusText">Monitoring your watch time</span>
+        </div>
+
+        <!-- Active Timers Display -->
+        <div class="active-timers" id="activeTimers" style="display: none;">
+          <div class="timers-header">
+            <span class="timer-icon">⏱️</span>
+            <span class="timer-title">Active Watch Sessions</span>
+          </div>
+          <div class="timers-list" id="timersList">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <button class="toggle-btn" id="pauseToggle">
+          <span id="pauseText">Pause for tonight</span>
+        </button>
+      </section>
+
+      <!-- Timer Settings -->
+      <section class="popup-section">
+        <h2 class="section-title">⏱️ Timer Settings</h2>
+
+        <div class="setting-item">
+          <label for="watchDuration" class="setting-label">
+            Watch duration
+            <span class="setting-value" id="watchDurationValue">--</span>
+          </label>
+          <input type="range" id="watchDuration" class="slider">
+          <div class="slider-labels">
+            <span id="watchDurationMinLabel">--</span>
+            <span id="watchDurationMaxLabel">--</span>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <label for="countdownDuration" class="setting-label">
+            Countdown warning
+            <span class="setting-value" id="countdownDurationValue">--</span>
+          </label>
+          <input type="range" id="countdownDuration" class="slider">
+          <div class="slider-labels">
+            <span id="countdownMinLabel">--</span>
+            <span id="countdownMaxLabel">--</span>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <label for="snoozeDuration" class="setting-label">
+            Snooze duration
+            <span class="setting-value" id="snoozeDurationValue">--</span>
+          </label>
+          <input type="range" id="snoozeDuration" class="slider">
+          <div class="slider-labels">
+            <span id="snoozeMinLabel">--</span>
+            <span id="snoozeMaxLabel">--</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bedtime Mode -->
+      <section class="popup-section">
+        <h2 class="section-title">🌜 Bedtime Mode</h2>
+
+        <div class="setting-item">
+          <label class="toggle-setting">
+            <span>Enable midnight reminder</span>
+            <input type="checkbox" id="bedtimeEnabled" checked>
+            <span class="toggle-switch"></span>
+          </label>
+          <p class="setting-description">Shows a gentle reminder after your bedtime (no auto-close)</p>
+        </div>
+
+        <div class="setting-item" id="bedtimeHourContainer">
+          <label for="bedtimeHour" class="setting-label">
+            Your bedtime
+            <span class="setting-value" id="bedtimeHourValue">12:00 AM</span>
+          </label>
+          <input type="range" id="bedtimeHour" min="0" max="23" step="1" value="0" class="slider">
+          <div class="slider-labels">
+            <span>10 PM</span>
+            <span>6 AM</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Websites -->
+      <section class="popup-section">
+        <h2 class="section-title">🎬 Monitored Websites</h2>
+
+        <div class="websites-container">
+          <div class="website-tabs">
+            <button class="website-tab active" data-tab="default">Default</button>
+            <button class="website-tab" data-tab="custom">Custom</button>
+          </div>
+
+          <div class="website-content" id="defaultWebsites">
+            <div class="website-list" id="defaultWebsiteList">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <div class="website-content hidden" id="customWebsites">
+            <div class="custom-website-input">
+              <input type="text" id="customWebsiteInput" placeholder="example.com" class="text-input">
+              <button id="addWebsiteBtn" class="btn-add">Add</button>
+            </div>
+            <div class="website-list" id="customWebsiteList">
+              <!-- Populated by JS -->
+            </div>
+            <p class="help-text">Add custom domains to monitor (without http:// or www)</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="popup-footer">
+      <p class="footer-text">Sleep well, stream better ✨</p>
+      <div class="save-indicator" id="saveIndicator">Saved!</div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+/* Overlay styles for Take a Break extension */
+
+.tab-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 15, 35, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-in-out;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tab-overlay-card {
+  background: linear-gradient(135deg, #1e2a4a 0%, #2d1b4e 100%);
+  border-radius: 24px;
+  padding: 48px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-overlay-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(138, 92, 246, 0.1) 0%, transparent 70%);
+  animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.tab-overlay-icon {
+  font-size: 64px;
+  margin-bottom: 24px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.tab-overlay-title {
+  color: #f8f9fa;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.tab-overlay-message {
+  color: #b8bcc8;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.tab-overlay-countdown {
+  font-size: 72px;
+  font-weight: 700;
+  color: #fbbf24;
+  margin: 24px 0;
+  text-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+  animation: pulse 1s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.tab-overlay-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.tab-overlay-btn {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.tab-overlay-btn-primary {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  color: white;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+}
+
+.tab-overlay-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(139, 92, 246, 0.6);
+}
+
+.tab-overlay-btn-secondary {
+  background: rgba(248, 249, 250, 0.1);
+  color: #f8f9fa;
+  border: 2px solid rgba(248, 249, 250, 0.2);
+}
+
+.tab-overlay-btn-secondary:hover {
+  background: rgba(248, 249, 250, 0.15);
+  border-color: rgba(248, 249, 250, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Midnight Toast Notification */
+.tab-midnight-toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: linear-gradient(135deg, #1e2a4a 0%, #2d1b4e 100%);
+  border-radius: 16px;
+  padding: 24px 28px;
+  max-width: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  z-index: 2147483646;
+  animation: slideIn 0.5s ease-out;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.tab-midnight-toast-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.tab-midnight-toast-content {
+  flex: 1;
+}
+
+.tab-midnight-toast-title {
+  color: #f8f9fa;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.tab-midnight-toast-message {
+  color: #b8bcc8;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+}
+
+.tab-midnight-toast-btn {
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.tab-midnight-toast-btn:hover {
+  background: rgba(139, 92, 246, 0.3);
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+/* Accessibility */
+.tab-overlay:focus,
+.tab-overlay-btn:focus,
+.tab-midnight-toast-btn:focus {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .tab-overlay-card {
+    padding: 32px 24px;
+    margin: 16px;
+  }
+
+  .tab-overlay-title {
+    font-size: 24px;
+  }
+
+  .tab-overlay-message {
+    font-size: 16px;
+  }
+
+  .tab-overlay-countdown {
+    font-size: 56px;
+  }
+
+  .tab-overlay-actions {
+    flex-direction: column;
+  }
+
+  .tab-overlay-btn {
+    width: 100%;
+  }
+
+  .tab-midnight-toast {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    max-width: none;
+  }
+}
