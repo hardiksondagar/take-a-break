@@ -2,6 +2,8 @@
 
 A friendly Chrome extension that helps you get better sleep by gently reminding you to stop binge-watching late at night.
 
+**Install:** [Chrome Web Store](https://chromewebstore.google.com/detail/take-a-break/ehhhemnkemficpheoidniabkoohmolaj)
+
 ## ✨ Features
 
 ### Auto Wind-Down Timer
@@ -58,7 +60,7 @@ A friendly Chrome extension that helps you get better sleep by gently reminding 
 
 1. **Clone or Download** this repository
    ```bash
-   git clone https://github.com/yourusername/take-a-break.git
+  git clone https://github.com/hardiksondagar/take-a-break.git
    cd take-a-break
    ```
 
@@ -77,7 +79,7 @@ A friendly Chrome extension that helps you get better sleep by gently reminding 
    - The extension is now active! 🎉
 
 ### From Chrome Web Store
-*Coming soon...*
+[Install on Chrome Web Store](https://chromewebstore.google.com/detail/take-a-break/ehhhemnkemficpheoidniabkoohmolaj)
 
 ## 🎨 How It Works
 
